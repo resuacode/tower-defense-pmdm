@@ -1,0 +1,10 @@
+{
+  "enabledMcpjsonServers": ["unityMCP"],
+  "permissions": {
+    "deny": [
+      "mcp__unityMCP__generate_image",
+      "mcp__unityMCP__generate_audio",
+      "mcp__unityMCP__generate_model"
+    ]
+  }
+}
