@@ -139,6 +139,10 @@ Modelos propios creados con Kenney Shape (herramienta de Kenney): monedas e icon
 - **Qué se ha cambiado y qué problemas ha dado:** (por completar)
 - **Confirmación:** no se ha usado IA generativa para ningún recurso gráfico, música, efecto de sonido ni efecto visual. No se usan las funciones de generación de assets de Unity AI.
 
+### Registro de scripts
+- `EnemyPath.cs` (2026-11-13): generado con IA en la sesión 3 (lista de waypoints con gizmos). Cambios a mano: pendiente de revisar por el alumno.
+- `EnemyPathFollower.cs` (2026-11-13): generado con IA en la sesión 3 (movimiento por waypoints con `MoveTowards` y giro suavizado). Cambios a mano: pendiente de revisar por el alumno.
+
 ## 15. Aspectos técnicos
 (por completar)
 
@@ -154,6 +158,8 @@ Proyecto Unity 6 (URP) creado con la estructura de carpetas. Instalados Cinemach
 Importados los packs Tower Defense Kit y Mini Characters de Kenney (solo FBX). Cambio de dirección de arte: el héroe y los enemigos pasan a ser personajes animados de Mini Characters, y Kenney Shape queda para monedas e iconos. La ambientación sigue siendo medieval, con un giro de ciencia ficción en los niveles 2 y 3. Limpieza de la plantilla de URP. Cierre del hito 1.
 
 Sesión 2: primera escena del juego, `Level01_Meadow`. Es un prado de 12×8 casillas del Tower Defense Kit con un camino en S de 30 casillas, numeradas en el orden en que lo recorrerán los enemigos. Al final del camino está el castillo, un prefab propio (`Castle`) montado con piezas de torre cuadrada. La cámara es fija, con Cinemachine. `SampleScene` desaparece y Build Profiles queda solo con el nivel 1. El tamaño del mapa se revisará cuando haya torres.
+
+Sesión 3: primer enemigo en movimiento. `EnemyPath` guarda la ruta como una lista de 6 waypoints, que son las esquinas del camino, y `EnemyPathFollower` la recorre con un índice y `Vector3.MoveTowards`. El prefab `Enemy_Zombie` es de momento una cápsula verde y desaparece al llegar al castillo. Se ha activado `Run In Background` para poder probar en Play desde VS Code.
 
 ## 17. Pruebas con jugadores
 (por completar)

@@ -26,6 +26,7 @@ argument-hint: "[NombreClase] [qué debe hacer]"
 Escribe el archivo con `Write` o `Edit`, o con `create_script` o `script_apply_edits` del MCP.
 
 ## 3. Comprobar en Unity
+0. Si el script es **nuevo** y se escribió con `Write`, Unity puede no importarlo: `refresh_unity(compile="request")` responde `refresh_triggered: false` y luego `manage_components add` no encuentra el tipo. Usa `refresh_unity(mode="force", scope="all", compile="request")`.
 1. Espera a que termine la compilación: lee `mcpforunity://editor/state` hasta `is_compiling: false`. Si el estado sale `stale`, haz una lectura real (por ejemplo `read_console`) antes de concluir nada.
 2. `read_console(types=["error","warning"])`. Si hay errores, aplica `/depurar` antes de seguir.
 3. Si el script va en un objeto, añádelo con `manage_components`, configura los campos y prueba en Play cuando tenga sentido.

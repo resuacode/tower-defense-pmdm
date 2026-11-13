@@ -34,6 +34,9 @@ Usa la skill `unity-mcp-skill` para la sintaxis de las herramientas. Aquí van l
 - `manage_asset move` puede responder `MoveAsset call failed` **aunque el movimiento se haya hecho**. Comprueba en disco y con `manage_asset get_info` antes de reintentar.
 - Borra los objetos de prueba por su `instanceID` (`search_method: by_id`), no por nombre.
 - `manage_gameobject create` ignora `is_static`: marca los objetos como estáticos después, con `modify`.
+- Para asignar referencias a objetos de la escena con `manage_components set_property`, usa `{"instanceID": id}` (o una lista de ellos). Un número suelto deja la referencia en `null` sin dar error. Comprueba siempre leyendo el componente.
+- Un prefab no puede guardar referencias a objetos de una escena (por ejemplo, el `EnemyPath`): se asignan en la instancia o desde código.
+- Para probar en Play desde VS Code hace falta `Run In Background` activado (ya lo está). Al pulsar Play, Unity recarga los scripts durante unos segundos antes de empezar: espera unos 10 s antes de la primera captura.
 - Al crear un prefab con `create_from_gameobject`, el `instanceId` devuelto no sirve para buscar la instancia: búscala con `find_gameobjects`.
 - Los cambios de Build Profiles (`manage_build scenes`) no se escriben en disco hasta ejecutar `execute_menu_item("File/Save Project")`.
 - Las capturas van a `Temp/McpScreenshots` (`output_folder`) para no llenar `Assets/` de imágenes.
