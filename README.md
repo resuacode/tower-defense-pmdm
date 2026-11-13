@@ -39,13 +39,22 @@ El kit contiene la estructura de carpetas, el `.gitignore` de Unity, el GDD y la
 
 ## Conectar un agente con Unity (MCP)
 
-Unity tiene un servidor MCP oficial dentro del paquete **AI Assistant** (Unity 6 o superior, en beta abierta; requiere una prueba o suscripción de Unity AI). Se activa en *Edit > Project Settings > AI > Unity MCP*. Comprueba los requisitos actuales en la [documentación de Unity](https://docs.unity3d.com/Packages/com.unity.ai.assistant@2.0/manual/unity-mcp-get-started.html).
+El proyecto usa **MCP for Unity** de CoplayDev (paquete `com.coplaydev.unity-mcp`, ya incluido en `Packages/manifest.json`).
+
+1. Abre el proyecto en Unity y, en *Window > MCP for Unity*, arranca el servidor. Por defecto escucha en `http://127.0.0.1:8080/mcp`.
+2. **Claude Code** lee la configuración de [`.mcp.json`](.mcp.json) (servidor `unityMCP`). Al abrir el proyecto, acepta el servidor cuando lo pida.
+3. Otros clientes, como GitHub Copilot, se configuran con esa misma URL en su propio `mcp.json`.
+
+Si una herramienta de Python o similar devuelve `400` al conectar con `127.0.0.1`, el proxy del sistema está interceptando la petición: hay que excluir las direcciones locales del proxy.
+
+[`.claude/settings.json`](.claude/settings.json) bloquea las herramientas de generación de imágenes, audio y modelos del MCP.
 
 Recuerda que en este proyecto **la IA solo se usa para el código**: no se usan las funciones de generación de assets de Unity AI. Las reglas completas están en [`CLAUDE.md`](CLAUDE.md).
 
 ## Licencias de los recursos
 
 - Tower Defense Kit por Kenney, CC0: <https://kenney.nl/assets/tower-defense-kit>
-- Modelos propios hechos con Kenney Shape.
+- Mini Characters por Kenney, CC0: <https://kenney.nl/assets/mini-characters>
+- Modelos propios hechos con Kenney Shape (monedas e iconos).
 
 La lista completa y vigente está en el apartado 13 de `Docs/GDD.md` y en la pantalla de créditos del juego.

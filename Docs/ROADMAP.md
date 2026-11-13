@@ -7,9 +7,9 @@ Fechas orientativas. Versión casi final en **enero** y entrega en **febrero** (
 | Cuándo | Hito | Qué debe estar hecho |
 |---|---|---|
 | Finales de octubre | 1. Concepto | Repositorio con `.gitignore` y estructura, GDD v0.2, proyecto Unity 6 URP vacío y paquetes instalados |
-| Noviembre | 2. Prototipo | Camino con waypoints, un enemigo, una torre, parcelas de construcción, monedas y héroe moviéndose, todo con cubos |
-| Mediados de noviembre a diciembre | 3. Estructura | Menú principal, pausa, opciones con Audio Mixer, victoria y derrota, créditos, flujo de escenas y guardado |
-| Diciembre | 4. Contenido | Los 3 niveles, modelos de Shape, audio definitivo y las 7 mecánicas |
+| Finales de noviembre | 2. Prototipo | Camino con waypoints, un enemigo, una torre, parcelas de construcción, monedas y héroe moviéndose. Escenario con las casillas del Tower Defense Kit; héroe, enemigos y monedas con cápsulas y cilindros |
+| Finales de noviembre a diciembre | 3. Estructura | Menú principal, pausa, opciones con Audio Mixer, victoria y derrota, créditos, flujo de escenas y guardado |
+| Diciembre | 4. Contenido | Los 3 niveles, personajes animados de Mini Characters, monedas e iconos de Shape, audio definitivo y las 7 mecánicas |
 | Enero | 5. Pulido | Iluminación, partículas, game feel, mando y pruebas con 3 jugadores. **Versión casi final** |
 | Febrero | 6. Entrega | Build de Windows, publicación en itch.io, GDD en PDF y postmortem |
 
@@ -20,25 +20,25 @@ Cada sesión tiene un objetivo, un concepto de programación que se explica ante
 | # | Objetivo del juego | Concepto que se explica | Hito |
 |---|---|---|---|
 | 1 | Crear repo, estructura y primer commit | Git, `.gitignore` y por qué no se sube `Library` | 1 |
-| 2 | Escena de prueba con camino y cámara fija | Transform, escenas y Cinemachine | 2 |
+| 2 | Nivel 1 con casillas del kit, prefab del castillo y cámara fija | Transform, escenas, prefabs y Cinemachine | 2 |
 | 3 | El enemigo recorre waypoints | Listas, índices y `Vector3.MoveTowards` | 2 |
 | 4 | Datos de enemigos en `ScriptableObject` | Separar datos y lógica | 2 |
 | 5 | Oleadas con `WaveSpawner` | Corrutinas y colas | 2 |
 | 6 | Movimiento del héroe con Input System | Acciones de entrada, teclado y mando | 2 |
-| 7 | Torre que apunta y dispara | Detección con colliders, vectores y rotación | 2 |
-| 8 | Proyectiles y *object pooling* | Instanciar frente a reutilizar | 2 |
+| 7 | Torre (piezas del kit + ballesta) que apunta y dispara | Detección con colliders, vectores y rotación | 2 |
+| 8 | Proyectiles (flecha del kit) y *object pooling* | Instanciar frente a reutilizar | 2 |
 | 9 | Monedas, economía y HUD | Eventos y desacoplar sistemas | 2-3 |
-| 10 | Parcelas de construcción y menú de torre | Interacción y estados | 3 |
+| 10 | Parcelas de construcción (marcadores `selection`) y menú de torre | Interacción y estados | 3 |
 | 11 | `GameManager`, victoria y derrota | Singleton y máquina de estados de partida | 3 |
 | 12 | Menú principal, pausa y `Time.timeScale` | Escenas, carga y tiempo escalado | 3 |
 | 13 | Opciones y Audio Mixer | Parámetros expuestos y `PlayerPrefs` | 3 |
 | 14 | Créditos y flujo completo de escenas | Cargar escenas y persistir datos | 3 |
 | 15 | IA del enemigo con estados | Patrón de máquina de estados | 4 |
-| 16 | Torre de ralentización y combinaciones | Efectos temporales y modificadores | 4 |
+| 16 | Torre de ralentización (cristales) y combinaciones | Efectos temporales y modificadores | 4 |
 | 17 | Reparar torres y habilidad del héroe | Tiempo de recarga y áreas de efecto | 4 |
 | 18 | Jefe con fases | Estados y eventos de fase | 4 |
-| 19 | Modelos de Shape y paleta común | Importación, materiales y coherencia visual | 4 |
-| 20 | Nivel 2 y 3 con progresión | Diseño de niveles y curva de dificultad | 4 |
+| 19 | Personajes animados (caballero y zombie), monedas e iconos de Shape | Animator, Avatar genérico, parámetros desde código y coherencia visual | 4 |
+| 20 | Nivel 2 y 3 con progresión y enemigos de ciencia ficción (robot, alien, OVNI) | Diseño de niveles y curva de dificultad | 4 |
 | 21 | Guardado de progreso | JSON y `PlayerPrefs` | 4 |
 | 22 | Iluminación y postprocesado | Luces, volúmenes URP | 5 |
 | 23 | Partículas y game feel | Screen shake, hit stop, *squash and stretch* | 5 |

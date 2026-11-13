@@ -1,6 +1,6 @@
 # CLAUDE.md - Instrucciones del proyecto
 
-Proyecto de clase (game jam, módulo PMDM): un **tower defense 3D con héroe controlable**, ambientación medieval, hecho en **Unity 6 con URP**. El diseño completo está en `Docs/GDD.md`: es la fuente de verdad, léelo antes de proponer cambios.
+Proyecto de clase (game jam, módulo PMDM): un **tower defense 3D con héroe controlable**, ambientación medieval con toques de ciencia ficción, hecho en **Unity 6 con URP**. El diseño completo está en `Docs/GDD.md`: es la fuente de verdad, léelo antes de proponer cambios.
 
 ## Reglas que no se pueden saltar
 
@@ -36,9 +36,11 @@ No dejes archivos sueltos en la raíz de `Assets`. Usa las carpetas que ya exist
 
 ## Arte y coherencia (criterio B8)
 
-- Entorno y torres: Tower Defense Kit de Kenney.
-- Héroe, enemigos, monedas, proyectiles e iconos: modelos propios hechos con Kenney Shape, siempre con la **misma paleta de 16 colores** (guardada en `Docs/img/paleta.png`). Los archivos de origen de Shape van en `Docs/ShapeSource`.
-- No mezcles estilos: si un asset no encaja, se modifica o se sustituye.
+- Entorno, torres y proyectiles: Tower Defense Kit de Kenney (`Assets/ThirdParty/KenneyTowerDefenseKit`).
+- Héroe y enemigos: Mini Characters de Kenney (`Assets/ThirdParty/KenneyMiniCharacters`), animados con Animator a partir de los clips del pack. Base medieval (caballero contra no-muertos); robots, aliens y OVNI son variantes de ciencia ficción para los niveles siguientes.
+- Monedas e iconos: modelos propios hechos con Kenney Shape, con la **misma paleta de 16 colores** (guardada en `Docs/img/paleta.png`) tomada de las `colormap` de los packs. Los archivos de origen de Shape van en `Docs/ShapeSource`.
+- Solo se usa el formato FBX de los packs. Los modelos importan su propio material `colormap` y se ven bien en URP: no los dupliques ni los sustituyas sin motivo.
+- No mezcles estilos: si un asset no encaja, se modifica o se sustituye. La mezcla medieval y ciencia ficción es intencionada y comparte el estilo de bloques de Kenney.
 
 ## Qué ya existe y qué no
 
