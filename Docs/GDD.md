@@ -59,7 +59,7 @@ Cada nivel añade un tipo de torre o de enemigo y las oleadas aumentan de tamañ
 | Mecánica | Descripción | Control | Nivel en el que aparece |
 |---|---|---|---|
 | Construir torres | Se colocan en parcelas libres gastando monedas | `E` / botón `A` | 1 |
-| Mejorar o vender torres | Sube el nivel de una torre o la devuelve parcialmente | Pulsar `W` mejora / botón `X`, mantener `Q` vende / botón `Y` | 1 |
+| Mejorar o vender torres | Sube el nivel de una torre o la devuelve parcialmente | Pulsar `R` mejora / botón `X`, mantener `Q` vende / botón `Y` | 1 |
 | Recoger monedas | Los enemigos las sueltan y el héroe debe ir a por ellas | Automático al acercarse | 1 |
 | Habilidad del héroe | Golpe en área con tiempo de recarga | `Espacio` / botón `B` | 2 |
 | Torre de ralentización | Reduce la velocidad de los enemigos y se combina con el resto | (torre) | 2 |
@@ -74,7 +74,7 @@ Cada nivel añade un tipo de torre o de enemigo y las oleadas aumentan de tamañ
 |---|---|---|
 | Moverse | `WASD` o flechas | Joystick izquierdo |
 | Construir / reparar | `E` | Botón `A` |
-| Mejorar (pulsar) | `W` | Botón `X` |
+| Mejorar (pulsar) | `R` | Botón `X` |
 | Vender (mantener) | `Q` | Botón `Y` |
 | Habilidad | `Espacio` | Botón `B` |
 | Pausa | `Esc` | `Start` |
