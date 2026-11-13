@@ -153,6 +153,8 @@ Proyecto Unity 6 (URP) creado con la estructura de carpetas. Instalados Cinemach
 ### 2026-11-13
 Importados los packs Tower Defense Kit y Mini Characters de Kenney (solo FBX). Cambio de dirección de arte: el héroe y los enemigos pasan a ser personajes animados de Mini Characters, y Kenney Shape queda para monedas e iconos. La ambientación sigue siendo medieval, con un giro de ciencia ficción en los niveles 2 y 3. Limpieza de la plantilla de URP. Cierre del hito 1.
 
+Sesión 2: primera escena del juego, `Level01_Meadow`. Es un prado de 12×8 casillas del Tower Defense Kit con un camino en S de 30 casillas, numeradas en el orden en que lo recorrerán los enemigos. Al final del camino está el castillo, un prefab propio (`Castle`) montado con piezas de torre cuadrada. La cámara es fija, con Cinemachine. `SampleScene` desaparece y Build Profiles queda solo con el nivel 1. El tamaño del mapa se revisará cuando haya torres.
+
 ## 17. Pruebas con jugadores
 (por completar)
 

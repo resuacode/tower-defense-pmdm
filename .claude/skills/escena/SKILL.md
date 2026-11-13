@@ -20,16 +20,22 @@ Usa la skill `unity-mcp-skill` para la sintaxis de las herramientas. Aquí van l
 - **Jerarquía del nivel:** objetos raíz vacíos que agrupan (`--- Environment`, `Path`, `BuildSpots`, `Castle`, `Cameras`, `Lighting`, `Managers`). Las casillas de suelo se marcan como `Static`.
 
 ## Medidas de los packs
-- Las casillas del Tower Defense Kit miden **1×1 unidad**: coloca en coordenadas enteras y gira en múltiplos de 90°.
+- Las casillas del Tower Defense Kit miden **1×1 unidad y 0,2 de alto**, con el centro en su posición: coloca en coordenadas enteras y gira en múltiplos de 90°. Todo lo que va encima del suelo (torres, decorado, personajes, waypoints) se coloca a `y = 0,2`.
+- Sin girar, `tile-straight` va a lo largo de Z, `tile-corner-round` une +Z con −X, y `tile-end` y `tile-spawn-end` abren hacia +Z. Un giro de +90° en Y lleva +Z a +X.
+- Piezas de torre cuadrada: `bottom`, `middle` y `top` miden 0,5 de alto, y `roof` 1,275.
 - `character-knight` mide algo más de media casilla. Mantén la misma escala en todos los personajes; si se cambia, se cambia en el importador, no en cada instancia.
 - Las torres se montan apilando piezas (`*-bottom`, `*-middle`, `*-top`, `*-roof`) y un arma (`weapon-ballista`…) como hijos de un prefab.
 
 ## Cámara (Cinemachine 3)
-- La `Main Camera` lleva `CinemachineBrain`; las vistas son `CinemachineCamera` (`manage_camera create_camera`). En los niveles, la cámara es fija con vista isométrica.
+- La `Main Camera` lleva `CinemachineBrain`; las vistas son `CinemachineCamera` (`manage_camera create_camera`). En los niveles, la cámara es fija con vista isométrica. La de `Level01_Meadow` (`CM_LevelCamera`) está en (5,75, 11, −4,5), girada 55° en X y con campo de visión de 40°.
+- `create_camera` **ignora `position`, `rotation` y `parent`**: crea la cámara y colócala después con `manage_gameobject modify`. El preset `static` añade un `CinemachineHardLookAt` que una cámara fija no necesita; quítalo.
 
 ## Problemas ya vistos con el MCP
 - `manage_asset move` puede responder `MoveAsset call failed` **aunque el movimiento se haya hecho**. Comprueba en disco y con `manage_asset get_info` antes de reintentar.
 - Borra los objetos de prueba por su `instanceID` (`search_method: by_id`), no por nombre.
+- `manage_gameobject create` ignora `is_static`: marca los objetos como estáticos después, con `modify`.
+- Al crear un prefab con `create_from_gameobject`, el `instanceId` devuelto no sirve para buscar la instancia: búscala con `find_gameobjects`.
+- Los cambios de Build Profiles (`manage_build scenes`) no se escriben en disco hasta ejecutar `execute_menu_item("File/Save Project")`.
 - Las capturas van a `Temp/McpScreenshots` (`output_folder`) para no llenar `Assets/` de imágenes.
 
 ## Después
