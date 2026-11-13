@@ -13,7 +13,7 @@
 | Plataformas | Windows (opcional: Web) |
 | Versión de Unity y pipeline | Unity 6 - URP (plantilla Universal 3D) |
 | Público objetivo y PEGI | Todos los públicos, PEGI 3-7 (violencia fantástica muy leve) |
-| Duración de una partida | 20-25 min (3 niveles de 6-9 min) **(propuesta)** |
+| Duración de una partida | 20-25 min (3 niveles de 6-9 min) |
 | Repositorio | (enlace) |
 | Página de itch.io | (enlace) |
 
@@ -22,7 +22,7 @@
 ### Resumen
 Un tower defense minimalista en 3D en el que un pequeño héroe recorre el campo de batalla recogiendo las monedas que sueltan los enemigos para construir y mejorar torres que protejan el castillo, mientras usa su propia habilidad para cubrir los huecos de la defensa.
 
-### Pilares de diseño (propuesta)
+### Pilares de diseño
 1. **Decisiones claras y rápidas:** poca información en pantalla, cada moneda cuenta.
 2. **El jugador no es un espectador:** el héroe se mueve, recoge, repara y ataca, no solo hace clic.
 3. **Cada nivel enseña algo nuevo:** una torre, un enemigo o una regla por nivel.
@@ -37,7 +37,7 @@ Un tower defense minimalista en 3D en el que un pequeño héroe recorre el campo
 El jugador tiene presencia física en el mapa: las monedas no se cobran solas, hay que ir a recogerlas, y eso obliga a decidir entre defender, recolectar o construir.
 
 ## 3. Historia y ambientación
-Un reino pequeño de estética medieval y colores vivos. El héroe, un caballero, es el último guardián de un castillo asediado por hordas de no-muertos que avanzan por los caminos. A medida que avanza la campaña se descubre que detrás de la invasión hay algo de otro mundo: aparecen robots, aliens y, al final, una nave OVNI. La historia se cuenta con textos breves entre niveles. **(propuesta)**
+Un reino pequeño de estética medieval y colores vivos. El héroe, un caballero, es el último guardián de un castillo asediado por hordas de no-muertos que avanzan por los caminos. A medida que avanza la campaña se descubre que detrás de la invasión hay algo de otro mundo: aparecen robots, aliens y, al final, una nave OVNI. La historia se cuenta con textos breves entre niveles.
 
 ## 4. Jugabilidad
 
@@ -54,12 +54,12 @@ Recoger monedas → construir o mejorar torres → sobrevivir a la oleada → re
 ### Progresión
 Cada nivel añade un tipo de torre o de enemigo y las oleadas aumentan de tamaño y variedad. Los niveles superados se desbloquean y guardan.
 
-## 5. Mecánicas **(propuesta, objetivo: 5 o más combinadas)**
+## 5. Mecánicas
 
 | Mecánica | Descripción | Control | Nivel en el que aparece |
 |---|---|---|---|
 | Construir torres | Se colocan en parcelas libres gastando monedas | `E` / botón `A` | 1 |
-| Mejorar o vender torres | Sube el nivel de una torre o la devuelve parcialmente | Pulsar `Q` mejora, mantener `Q` vende / botón `X` **(propuesta)** | 1 |
+| Mejorar o vender torres | Sube el nivel de una torre o la devuelve parcialmente | Pulsar `W` mejora / botón `X`, mantener `Q` vende / botón `Y` | 1 |
 | Recoger monedas | Los enemigos las sueltan y el héroe debe ir a por ellas | Automático al acercarse | 1 |
 | Habilidad del héroe | Golpe en área con tiempo de recarga | `Espacio` / botón `B` | 2 |
 | Torre de ralentización | Reduce la velocidad de los enemigos y se combina con el resto | (torre) | 2 |
@@ -74,13 +74,14 @@ Cada nivel añade un tipo de torre o de enemigo y las oleadas aumentan de tamañ
 |---|---|---|
 | Moverse | `WASD` o flechas | Joystick izquierdo |
 | Construir / reparar | `E` | Botón `A` |
-| Mejorar (pulsar) / vender (mantener) **(propuesta)** | `Q` | Botón `X` |
+| Mejorar (pulsar) | `W` | Botón `X` |
+| Vender (mantener) | `Q` | Botón `Y` |
 | Habilidad | `Espacio` | Botón `B` |
 | Pausa | `Esc` | `Start` |
 
 Los controles se enseñarán con indicaciones en pantalla durante el nivel 1.
 
-## 7. Niveles **(propuesta)**
+## 7. Niveles
 
 ### Nivel 1: El prado
 - **Objetivo:** aguantar 8 oleadas.
@@ -104,9 +105,9 @@ Todos los personajes salen del pack Mini Characters de Kenney, salvo el jefe, qu
 |---|---|---|---|
 | Héroe | `character-knight` con `weapon-sword` y `shield-round` | Velocidad media, recoge monedas, repara torres y tiene una habilidad en área | 1 |
 | Común | `character-zombie` | Camina por el camino hacia el castillo | 1 |
-| Rápido **(propuesta)** | `character-robot` | Poca vida, mucha velocidad | 2 |
-| Blindado **(propuesta)** | `character-alien` | Se detiene a destruir torres | 3 |
-| Jefe **(propuesta)** | `enemy-ufo-*` con `enemy-ufo-beam` | Varias fases | 3 |
+| Rápido | `character-robot` | Poca vida, mucha velocidad | 2 |
+| Blindado | `character-alien` | Se detiene a destruir torres | 3 |
+| Jefe | `enemy-ufo-*` con `enemy-ufo-beam` | Varias fases | 3 |
 
 ## 9. Interfaz y flujo de pantallas
 (por completar en el hito 3: diagrama de escenas, HUD y menús)
